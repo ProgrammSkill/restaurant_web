@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  restaurant_db:
+    container_name: restaurant_db
+    image: postgres:15.0
+    restart: always
+    env_file:
+      - ./.env
+  restaurant_web:
+    container_name: restaurant_web
+    build: .
+    ports:
+      - "4001:4001"
+    command: sh -c "gunicorn restaurant_web.wsgi:application --bind 0.0.0.0:4001"
+    restart: always
+    env_file:
+      - ./.env
+    depends_on:
+      - restaurant_db
+    volumes:
+      - .:/app/

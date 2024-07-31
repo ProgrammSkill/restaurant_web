@@ -154,5 +154,6 @@ class FoodListSerializer(serializers.ModelSerializer):
 ![image](https://github.com/user-attachments/assets/f15ccae4-2786-47ed-9bc0-85ef16d41986)
 
 Для развёртывания проекта необходимо сначала установить все зависимости  pip install -r requirements.txt
+
 Для сборки докер контейнеров необходимо выполнить команду:  docker-compose --file docker-compose.prod.yaml up --build -d
 

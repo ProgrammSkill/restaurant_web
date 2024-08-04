@@ -85,6 +85,7 @@ JSON следующего формата:
       {...}
    ]
 ​
+
 #models.py
 
 from django.db import models

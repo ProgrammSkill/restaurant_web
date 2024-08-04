@@ -85,7 +85,7 @@ JSON следующего формата:
       {...}
    ]
 ​
-
+```
 #models.py
 
 from django.db import models
@@ -150,7 +150,7 @@ class FoodListSerializer(serializers.ModelSerializer):
     class Meta:
         model = FoodCategory
         fields = ('id', 'name_ru', 'name_en', 'name_ch', 'order_id', 'foods')
-
+```
 
 ![image](https://github.com/user-attachments/assets/f15ccae4-2786-47ed-9bc0-85ef16d41986)
 
